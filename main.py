@@ -5,7 +5,7 @@ import re
 import os
 import time
 
-os.system('cls')
+# os.system('cls')
 
 feature_result = []
 dict_features_1To57 = {}
@@ -112,7 +112,7 @@ def main():
                 unsafe_allow_html=True)
     st.write("Algorithm: **Random Forest**")
     st.markdown(
-        "Training Data: [**see here**](https://www.openml.org/search?type=data&sort=runs&status=active&id=44)")
+            "Training Data: [**see here**](https://www.openml.org/search?type=data&sort=runs&status=active&id=44)")
 
     uploaded_email = st.text_area(
         "Enter the email you want to identify in the box below!", height=200, key="text_area")
