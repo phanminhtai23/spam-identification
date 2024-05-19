@@ -9,6 +9,7 @@
 ## Hệ thống sau khi nhận diện xong
 <img src="./assists/result.png" width="500">
 
+## Cài đặt
 1. Tải kho lưu trữ này về
 ```bash
 git clone https://github.com/phanminhtai23/spam-identification.git
