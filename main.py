@@ -90,14 +90,14 @@ def show_table_feature(dict_feature):
     for key, value in dict_feature.items():
         df[key] = [value]
 
-    st.markdown("<h2 style='text-align: center;'>Kết quả trích 57 đặc trưng 🔍</h2>",
+    st.markdown("<h2 style='text-align: center;'>The results extracted 57 features 🔍</h2>",
                 unsafe_allow_html=True)
     st.dataframe(df)
 
 # Hiển thị kết quả
 def showResult(result):
     st.title(
-        "-------------Kết quả dự đoán-------------")
+        "-------------Predicted results------------")
     if len(result) == 1:
         if result[0] == '1':
             st.header('→ Spam 😾')
@@ -108,20 +108,20 @@ def showResult(result):
 # Hàm chính
 def main():
     loaded_model = load('Random_Forest.joblib')
-    st.markdown("<h1 style='text-align: center;'>HỆ THỐNG NHẬN DIỆN THƯ RÁC ✉️</h1>",
+    st.markdown("<h1 style='text-align: center;'>SPAM IDENTIFICATION SYSTEM ✉️</h1>",
                 unsafe_allow_html=True)
-    st.write("Giải thuật: **Random Forest**")
+    st.write("Algorithm: **Random Forest**")
     st.markdown(
-        "Dữ liệu huấn luyện: [**Xem tại đây**](https://www.openml.org/search?type=data&sort=runs&status=active&id=44)")
+        "Training Data: [**see here**](https://www.openml.org/search?type=data&sort=runs&status=active&id=44)")
 
     uploaded_email = st.text_area(
-        "Nhập email muốn nhận diện vào ô dưới đây!", height=200, key="text_area")
-    convert_button = st.button("Nhận diện")
+        "Enter the email you want to identify in the box below!", height=200, key="text_area")
+    convert_button = st.button("Predict")
 
     if convert_button:
         if uploaded_email == '':
             st.warning(
-                "Vui lòng nhập đoạn văn bản email vào ô để nhận dạng thư rác!"
+                "Please enter the email text in the box to identify spam!"
             )
         else:
             # Bắt đầu đo thời gian
@@ -130,7 +130,7 @@ def main():
             # Hiển thị thanh tiến trình
             progress_bar = st.progress(0)
             # Sử dụng st.spinner để hiển thị thông báo đang chạy
-            with st.spinner('Model đang nhận diện...'):
+            with st.spinner('The model is predicting...'):
                 time.sleep(0.5)
                 dict, feature = get_feature(uploaded_email)
                 progress_bar.progress(30)
@@ -139,7 +139,7 @@ def main():
                 result = loaded_model.predict(feature)
                 progress_bar.progress(100)
                 time.sleep(0.5)
-                st.success('Nhận diện hoàn tất! ✔️')
+                st.success('Prediction completed! ✔️')
 
                 show_table_feature(dict)
                 showResult(result)
@@ -147,7 +147,7 @@ def main():
             # Kết thúc đo thời gian
             end_time = time.time()
             execution_time = end_time - start_time
-            print("Tổng thời gian nhận diện: ", execution_time)
+            print("Totals time: ", execution_time)
 
 if __name__ == "__main__":
     main()
