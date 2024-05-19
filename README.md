@@ -4,10 +4,10 @@
 - Có thể thay thế Model khác bằng cách lưu đồ Model của bạn lại, sau đó thay đổi đường dấn tới Model của bạn trong file main.py
 - Bạn thấy hữu ích cho mình cho 1 Start nhé!! 🐱🐱
 ## Trang chủ hệ thống
-<img src="https://github.com/phanminhtai23/spam-identification/blob/main/assists/system_spam-base.png" width="500"> 
+<img src="./assists/system_spam-base.png" width="500"> 
 
 ## Hệ thống sau khi nhận diện xong
-<img src="https://github.com/phanminhtai23/spam-identification/blob/main/assists/result.png" width="500">
+<img src="./assists/result.png" width="500">
 
 1. Tải kho lưu trữ này về
 ```bash
