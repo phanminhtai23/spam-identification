@@ -31,7 +31,10 @@ def get_feature(email):
     # 1 -> 48
     for element in feature_1To48:
         count_word = email.lower().count(element.lower())
-        calculator = round((float)((count_word/total_words)*100), 2)
+        if total_words == 0:
+            calculator = 0
+        else:
+            calculator = round((float)((count_word/total_words)*100), 2)
         dict_features_1To57['word_freq_' + element] = calculator
         feature_temp.append(calculator)
     # 49 -> 54
@@ -97,7 +100,7 @@ def show_table_feature(dict_feature):
 # Hiển thị kết quả
 def showResult(result):
     st.title(
-        "-------------Predicted results------------")
+        "------------Predicted Results------------")
     if len(result) == 1:
         if result[0] == '1':
             st.header('→ Spam 😾')
