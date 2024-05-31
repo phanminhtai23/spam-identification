@@ -1,0 +1,12 @@
+48 thuộc tính thực [0,100] liên tục thuộc loại
+word_freq_WORD = phần trăm số từ trong e-mail khớp với WORD, tức là 100 * (số lần WORD xuất hiện trong e-mail)/tổng ​​số từ trong e-mail. "Từ" trong trường hợp này là bất kỳ chuỗi ký tự chữ và số nào được giới hạn bởi các ký tự không phải chữ và số hoặc ở cuối chuỗi.
+
+6 thuộc tính thực [0,100] liên tục thuộc loại char_freq_CHAR = tỷ lệ phần trăm ký tự trong e-mail khớp với CHAR, tức là 100 * (số lần xuất hiện CHAR) / tổng số ký tự trong e-mail
+
+1 thuộc tính thực [1,...] liên tục thuộc loại Capital_run_length_average = độ dài trung bình của các chuỗi chữ in hoa không bị gián đoạn
+
+1 thuộc tính số nguyên liên tục [1,...] thuộc loại Capital_run_length_longest = độ dài của chuỗi chữ in hoa dài nhất không bị gián đoạn
+
+1 thuộc tính số nguyên liên tục [1,...] thuộc loại Capital_run_length_total = tổng độ dài của các chuỗi chữ in hoa không bị gián đoạn = tổng số chữ in hoa trong e-mail
+
+1 thuộc tính lớp danh nghĩa {0,1} của loại thư rác = biểu thị liệu e-mail có bị coi là thư rác (1) hay không (0), tức là e-mail thương mại không được yêu cầu.
