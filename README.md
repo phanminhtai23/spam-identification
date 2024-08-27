@@ -3,11 +3,9 @@
 - Hệ thống sử dụng model Random Forest, được huấn luyện với bộ dữ liệu hơn 4000 dòng, dữ liệu có 57 đặc trưng ([xem chi tiết dữ tại đây](https://www.openml.org/search?type=data&sort=runs&status=active&id=44)). Model có Accuracy xấp xỉ 95,5%.
 - Có thể thay thế Model khác bằng cách lưu đồ Model của bạn lại, sau đó thay đổi đường dẫn tới Model của bạn trong file main.py
 - Bạn thấy hữu ích cho mình cho 1 Start nhé!! 🐱🐱
-## Trang chủ hệ thống
-<img src="./assists/system_spam-base.png" width="500"> 
-
-## Hệ thống sau khi nhận diện xong
-<img src="./assists/result.png" width="500">
+- 
+## Demo
+![Demo GIF](./assists/demo_vid.gif)
 
 ## Cài đặt
 1. Tải kho lưu trữ này về
