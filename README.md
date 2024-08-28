@@ -17,10 +17,9 @@ cd spam-identification
 ```bash
 pip install -r requirements.txt
 ```
-3. Khởi chạy hệ thống
+3. Khởi chạy hệ thống (streamlit run <đường dẫn đến file hệ thống>)
 ```bash
-# streamlit run <đường dẫn đến file hệ thống>
-streamlit run .\main.py
+streamlit run main.py
 ```
 
 
