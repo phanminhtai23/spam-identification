@@ -5,7 +5,7 @@
 - Bạn thấy hữu ích cho mình cho 1 Start nhé!! 🐱🐱
 
 ## Demo
-![Demo GIF](./assists/demo_vid1.gif)
+![Demo GIF](./assists/demo-vid_spam_.gif)
 
 ## Cài đặt
 1. Tải kho lưu trữ này về
