@@ -1,7 +1,6 @@
 # import csv
 from joblib import dump
 import pandas as pd
-import openml
 from sklearn.ensemble import RandomForestClassifier
 # from sklearn.datasets import load_iris, load_wine,load_digits, load_breast_cancer
 from sklearn.model_selection import train_test_split
@@ -11,28 +10,26 @@ from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_sc
 
 import matplotlib.pyplot as plt
 
-dataset = openml.datasets.get_dataset(
-    44, download_data=bool, download_qualities=bool, download_features_meta_data=bool)
-
-X, y, _, _ = dataset.get_data(target=dataset.default_target_attribute)
+from ucimlrepo import fetch_ucirepo 
+  
+# fetch dataset 
+spambase = fetch_ucirepo(id=94) 
+  
+# data (as pandas dataframes) 
+X = spambase.data.features 
+y = spambase.data.targets 
 
 # X_encoded = pd.get_dummies(X)
 
 X_Train, X_Test, Y_Train, Y_Test = train_test_split(
             X, y, test_size=1/3, random_state=20)
 
-smote = SMOTE(random_state=42)
-X_train_resampled, y_train_resampled = smote.fit_resample(X_Train, Y_Train)
+rf_model = RandomForestClassifier(n_estimators = 100, max_features ='log2', max_depth = 17, random_state=42)
 
-print("Số lượng mẫu trước khi tăng cường:", Y_Train.value_counts())
-print("Số lượng mẫu sau khi tăng cường:", pd.Series(y_train_resampled).value_counts())
+rf_model.fit(X_Train, Y_Train)
+print("X", X.columns)
+dump(rf_model, 'Random_Forest.joblib')
 
-
-# rf_model = RandomForestClassifier(n_estimators = 100, max_features ='log2', max_depth = 17, random_state=42)
-
-# rf_model.fit(X_Train, Y_Train)
-# print("X", X.columns)
-# dump(rf_model, 'Random_Forest.joblib')
 # Y_Pred = rf_model.predict(X_Test)
 
 # # report = classification_report(Y_Test, Y_Pred, zero_division=0.0)

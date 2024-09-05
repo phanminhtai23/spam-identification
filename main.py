@@ -99,12 +99,13 @@ def show_table_feature(dict_feature):
 
 # Hiển thị kết quả
 def showResult(result):
+    print(result[0])
     st.title(
-        "------------Predicted Results------------")
+        "------------Predicted Results-----------")
     if len(result) == 1:
-        if result[0] == '1':
+        if result[0] == 1:
             st.header('→ Spam 😾')
-        elif result[0] == '0':
+        elif result[0] == 0:
             st.header('→ Not Spam 😸')
 
 
