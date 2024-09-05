@@ -1,4 +1,5 @@
 ﻿absl-py==2.0.0
+pywin32==306; platform_system == "Windows"
 addict==2.4.0
 altair==5.3.0
 argon2-cffi==23.1.0
@@ -118,7 +119,6 @@ python-dateutil==2.8.2
 python-dotenv==1.0.0
 python-magic==0.4.27
 pytz==2023.3.post1
-pywin32==306
 PyYAML==6.0.1
 referencing==0.34.0
 regex==2023.12.25
