@@ -1,5 +1,4 @@
 ﻿absl-py==2.0.0
-pywin32==306; platform_system == "Windows"
 addict==2.4.0
 altair==5.3.0
 argon2-cffi==23.1.0
