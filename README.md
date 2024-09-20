@@ -4,7 +4,7 @@
 - Có thể thay thế Model khác bằng cách lưu đồ Model của bạn lại, sau đó thay đổi đường dẫn tới Model của bạn trong file main.py
 - Bạn thấy hữu ích cho mình cho 1 Start nhé!! 🐱🐱
 
-## Demo
+## Demo: [Click here](https://pmtai-spam-identification.streamlit.app/)
 ![Demo GIF](./assists/demo-vid_spam.gif)
 
 ## Cài đặt
