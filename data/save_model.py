@@ -11,6 +11,9 @@ from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_sc
 
 import matplotlib.pyplot as plt
 
+import openml
+import pandas as pd
+
 dataset = openml.datasets.get_dataset(
     44, download_data=bool, download_qualities=bool, download_features_meta_data=bool)
 
